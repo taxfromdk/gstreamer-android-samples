@@ -4,8 +4,9 @@ apply plugin: 'org.jetbrains.kotlin.android'
 android {
     compileSdkVersion 32
 
+    namespace = "org.freedesktop.gstreamer.tutorials.tutorial_5"
+
     defaultConfig {
-        applicationId "org.freedesktop.gstreamer.tutorials.tutorial_5"
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 1
@@ -56,6 +57,10 @@ android {
         ndkBuild {
             path 'jni/Android.mk'
         }
+    }
+    buildFeatures {
+        renderScript true
+        aidl true
     }
 }
 
